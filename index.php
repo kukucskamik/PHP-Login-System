@@ -1,4 +1,9 @@
-
+<?php 
+    // Allow the config
+    define('__CONFIG__', true);
+    // Require the config.
+    require_once "inc/config.php"; 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,39 +19,19 @@
 <body>
 
     <div class="uk-section uk-container">
-        <div class="uk-grid uk-child-width-l-3@s uk-child-width-l-l" uk-grid>
-        <form class="uk-form-stacked js-login">
-
-    <div class="uk-margin">
-        <label class="uk-form-label" for="form-stacked-text">Email</label>
-        <div class="uk-form-controls">
-            <input class="uk-input" id="form-stacked-text" type="email" placeholder="email@email.com" required="required">
-        </div>
-    </div>
-    <div class="uk-margin">
-        <label class="uk-form-label" for="form-stacked-text">Password</label>
-        <div class="uk-form-controls">
-            <input class="uk-input" id="form-stacked-text" type="password" placeholder="Your Password" required="required">
-        </div>
+        <?php
+            echo "Hello world! Today is: ";
+            echo date("Y m d");
+        ?>
+        <p>
+            <a href="/login.php">Login</a>
+            <a href="/register.php">Register</a>
+        </p>
     </div>
 
-    <div class="uk-margin">
-        <button class="uk-button uk-button-default" type="submit">Login</button>
-        </div>
-    </div>
+<?php require_once "inc/footer.php"; ?>
 
     
-
-</form>
-        </div>
-
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
 
 </body>
 </html>
